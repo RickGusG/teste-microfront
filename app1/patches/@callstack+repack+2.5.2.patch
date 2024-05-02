@@ -1,0 +1,26 @@
+diff --git a/node_modules/@callstack/repack/commands.js b/node_modules/@callstack/repack/commands.js
+index 8342509..7a934a4 100644
+--- a/node_modules/@callstack/repack/commands.js
++++ b/node_modules/@callstack/repack/commands.js
+@@ -59,8 +59,8 @@ const webpackConfigOption = {
+ module.exports = [
+   {
+     name: 'webpack-bundle',
+-    description: bundleCommand.description,
+-    options: bundleCommand.options.concat(
++    description: bundleCommand?.description,
++    options: bundleCommand?.options.concat(
+       {
+         name: '--verbose',
+         description: 'Enables verbose logging',
+@@ -71,8 +71,8 @@ module.exports = [
+   },
+   {
+     name: 'webpack-start',
+-    options: startCommand.options.concat(webpackConfigOption),
+-    description: startCommand.description,
++    options: startCommand?.options.concat(webpackConfigOption),
++    description: startCommand?.description,
+     func: require('./dist/commands/start').start,
+   },
+ ];
